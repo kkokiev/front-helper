@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import MainMenu from '../main-menu/main-menu';
@@ -9,9 +10,14 @@ const ShellWrap = styled.div`
   padding-left: 46px;
 `;
 
-const Shell = () =>
+const Shell = ({ children }) =>
   <ShellWrap>
     <MainMenu />
+    {children}
   </ShellWrap>;
+
+Shell.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 export default Shell;
