@@ -2,6 +2,7 @@ module.exports = {
   "extends": "airbnb",
   "env": {
     "browser": true,
+    "jest": true
   },
   "rules": {
     "react/require-default-props": [0],
