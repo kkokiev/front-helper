@@ -6,9 +6,9 @@ import {
   FlexBtnPanelTitle,
   FlexBtnPanelSubtitle,
   FlexBtnPanelInfo,
-  FlexBtnWrap,
-  FlexBtn
+  FlexBtnWrap
 } from './flexbox-btn-panel-styled';
+import Button from '../../../ui/common/button';
 
 const FlexboxBtnPanel = ({ title, subtitle, info, buttons }) =>
   <FlexBtnPanel>
@@ -20,7 +20,7 @@ const FlexboxBtnPanel = ({ title, subtitle, info, buttons }) =>
     <FlexBtnPanelInfo>{info}</FlexBtnPanelInfo>
     <FlexBtnWrap>
       {buttons.map(btn =>
-        <FlexBtn key={btn}>{btn}</FlexBtn>
+        <Button key={btn}>{btn}</Button>
       )}
     </FlexBtnWrap>
   </FlexBtnPanel>;

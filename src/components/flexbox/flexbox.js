@@ -1,13 +1,12 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 
 import flexWrapData from '../../helpers/flexbox-data';
-import Page from '../../ui/common/page-styled';
 import { FlexHeader, FlexBody, FlexInputSide, FlexOutputSide } from './flexbox-styled';
+import FlexOutput from './parts/flex-output';
 import FlexboxBtnPanel from './parts/flexbox-btn-panel';
 
 const Flexbox = () =>
-  <Page>
+  <div>
     <FlexHeader>
       <h1>Flexbox css generator</h1>
     </FlexHeader>
@@ -25,20 +24,9 @@ const Flexbox = () =>
       </FlexInputSide>
 
       <FlexOutputSide>
-        <button>Get css</button>
-        <h2>Preview</h2>
-        <div>
-          <div className="item" />
-          <div className="item" />
-          <div className="item" />
-          <div className="item" />
-          <div className="item" />
-          <div className="item" />
-          <div className="item" />
-          <div className="item" />
-        </div>
+        <FlexOutput />
       </FlexOutputSide>
     </FlexBody>
-  </Page>;
+  </div>;
 
 export default Flexbox;
