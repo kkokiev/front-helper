@@ -1,6 +1,8 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Button = styled.button`
+const StyledButton = styled.button`
   padding: .375rem .75rem;
   font-size: 1.6rem;
   background: ${props => props.isActive ? '#6c757d' : '#fff'};
@@ -27,5 +29,16 @@ const Button = styled.button`
     border-bottom-right-radius: 5px;
   }
 `;
+
+const Button = ({ children, isActive, onClick }) =>
+  <StyledButton isActive={isActive} onClick={onClick}>
+    {children}
+  </StyledButton>;
+
+Button.propTypes = {
+  children: PropTypes.string.isRequired,
+  isActive: PropTypes.bool,
+  onClick: PropTypes.func
+};
 
 export default Button;
