@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import MainMenu from '../../components/main-menu/main-menu';
 
-describe('Shell', () => {
+describe('MainMenu', () => {
   const menu = shallow(<MainMenu />);
 
   test('render', () => {

@@ -69,7 +69,7 @@ const FlexboxBtnPanel = ({ changeFlexStyle, activeStyle, title, subtitle, info, 
 FlexboxBtnPanel.propTypes = {
   activeStyle: PropTypes.string.isRequired,
   buttons: PropTypes.array.isRequired,
-  changeFlexStyle: PropTypes.object.isRequired,
+  changeFlexStyle: PropTypes.func.isRequired,
   info: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired
