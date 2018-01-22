@@ -15,15 +15,6 @@ export const FlexOutputTitle = styled.div`
   }
 `;
 
-export const FlexOutputContainer = styled.div`
-  display: flex;
-  width: 100%;
-  min-height: 300px;
-  border: 1px solid #ccc;
-  background: #f6f6f6;
-  overflow-x: scroll;
-`;
-
 export const FlexOutputItem = styled.div`
   flex-shrink: 0;
   height: ${props => `${props.height}px`};

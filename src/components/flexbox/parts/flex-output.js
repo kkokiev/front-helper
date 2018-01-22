@@ -7,10 +7,10 @@ import { compose, withState, withHandlers } from 'recompose';
 import {
   FlexOutputRow,
   FlexOutputTitle,
-  FlexOutputContainer,
   FlexOutputItem,
   FlexOutputAddItemBtn
 } from './flex-output-styled';
+import FlexOutputContainer from './flex-output-container';
 import Button from '../../../ui/common/button';
 
 import {
@@ -22,7 +22,8 @@ import {
 } from '../../../modules/flex-items/flex-items-actions';
 
 const mapStateToProps = state => ({
-  items: state.flexItemsReducer
+  flexContainer: state.flexContainerReducer,
+  flexItems: state.flexItemsReducer
 });
 
 const mapDispatchToProps = {
@@ -75,7 +76,8 @@ const enhance = compose(
 
 const FlexOutput = ({
   state: { randomHeight, randomWidth, showCSS },
-  items,
+  flexContainer,
+  flexItems,
   addFlexItem,
   toggleRandomHeight,
   toggleRandomWidth,
@@ -95,11 +97,11 @@ const FlexOutput = ({
     </FlexOutputRow>
 
     <FlexOutputRow>
-      <FlexOutputContainer>
+      <FlexOutputContainer flexStyles={flexContainer}>
         <FlexOutputAddItemBtn onClick={addFlexItem}>Add</FlexOutputAddItemBtn>
-        {items.map(item =>
+        {flexItems.map(item =>
           <FlexOutputItem key={item.id} height={item.height} width={item.width}>
-            .item
+            .item{item.id}
           </FlexOutputItem>
         )}
       </FlexOutputContainer>
@@ -109,7 +111,14 @@ const FlexOutput = ({
 
 FlexOutput.propTypes = {
   addFlexItem: PropTypes.func.isRequired,
-  items: PropTypes.array.isRequired,
+  flexContainer: PropTypes.shape({
+    flexWrap: PropTypes.string.isRequired,
+    flexDirection: PropTypes.string.isRequired,
+    justifyContent: PropTypes.string.isRequired,
+    alignItems: PropTypes.string.isRequired,
+    alignContent: PropTypes.string.isRequired,
+  }),
+  flexItems: PropTypes.array.isRequired,
   state: PropTypes.shape({
     randomHeight: PropTypes.bool.isRequired,
     randomWidth: PropTypes.bool.isRequired,

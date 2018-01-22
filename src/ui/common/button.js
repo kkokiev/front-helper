@@ -30,15 +30,19 @@ const StyledButton = styled.button`
   }
 `;
 
-const Button = ({ children, isActive, onClick }) =>
-  <StyledButton isActive={isActive} onClick={onClick}>
+const Button = ({ children, isActive, onClick, value }) =>
+  <StyledButton isActive={isActive} onClick={onClick} value={value}>
     {children}
   </StyledButton>;
 
 Button.propTypes = {
   children: PropTypes.string.isRequired,
   isActive: PropTypes.bool,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ])
 };
 
 export default Button;

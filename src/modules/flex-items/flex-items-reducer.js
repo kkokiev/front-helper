@@ -8,38 +8,11 @@ import {
 
 const height = 50;
 const width = 80;
-const INITIAL_STATE = [
-  {
-    id: 1,
-    height,
-    width
-  },
-  {
-    id: 2,
-    height,
-    width
-  },
-  {
-    id: 3,
-    height,
-    width
-  },
-  {
-    id: 4,
-    height,
-    width
-  },
-  {
-    id: 5,
-    height,
-    width
-  },
-  {
-    id: 6,
-    height,
-    width
-  }
-];
+const INITIAL_STATE = [];
+
+for (let i = 1; i < 7; i++) {
+  INITIAL_STATE.push({ id: i, height, width });
+}
 
 const flexItemsReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {

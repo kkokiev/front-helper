@@ -18,6 +18,7 @@ module.exports = {
     "jsx-a11y/anchor-is-valid": [0],
     "react/no-array-index-key": [0],
     "no-shadow": [0],
-    "no-confusing-arrow": [0]
+    "no-confusing-arrow": [0],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
   }
 };
