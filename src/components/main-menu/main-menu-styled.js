@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Menu = styled.div`
   position: fixed;
-  left: ${props => props.isOpened ? '0px' : '-154px'};
+  left: 0;
   top: 0;
   bottom: 0;
   overflow-y: auto;
@@ -11,6 +11,7 @@ export const Menu = styled.div`
   background: #000;
   color: #fff;
   transition: .35s ease-in-out;
+  transform: translateX(${props => props.isOpened ? '0px' : '-154px'});
 `;
 
 export const MenuBtnWrap = styled.div`
