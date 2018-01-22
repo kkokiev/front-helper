@@ -14,12 +14,12 @@ describe('FlexboxBtnPanel', () => {
       alignContent: 'flex-start',
     }
   }) => store);
-  
+
   const panel = shallow(
     <Provider store={store}>
       <FlexboxBtnPanel />
     </Provider>
-    );
+  );
 
   test('render', () => {
     expect(panel.exists()).toBe(true);

@@ -36,7 +36,7 @@ const Button = ({ children, isActive, onClick, value }) =>
   </StyledButton>;
 
 Button.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.string,
   isActive: PropTypes.bool,
   onClick: PropTypes.func,
   value: PropTypes.oneOfType([

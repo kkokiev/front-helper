@@ -13,14 +13,14 @@ describe('FlexOutput', () => {
       alignItems: 'flex-start',
       alignContent: 'flex-start',
     },
-    flexItems: [{ id: 1, height: 50, width: 80}]
+    flexItems: [{ id: 1, height: 50, width: 80 }]
   }) => store);
-  
+
   const output = shallow(
     <Provider store={store}>
       <FlexOutput />
     </Provider>
-    );
+  );
 
   test('render', () => {
     expect(output.exists()).toBe(true);

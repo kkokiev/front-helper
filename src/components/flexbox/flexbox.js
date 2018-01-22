@@ -13,13 +13,13 @@ const Flexbox = () =>
       <h1>Flexbox css generator</h1>
       <p>
         Inspired by
-        {` `}
+        {' '}
         <a
           href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          "A Complete Guide to Flexbox"
+          A Complete Guide to Flexbox
         </a>
       </p>
     </PageTitle>
