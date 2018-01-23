@@ -9,9 +9,8 @@ import {
   changeFlexContainerStyles
 } from '../../../modules/flex-container/flex-container-actions';
 
+import Panel from '../../../ui/common/panel';
 import {
-  FlexBtnPanel,
-  FlexBtnPanelTitle,
   FlexBtnPanelSubtitle,
   FlexBtnPanelInfo,
   FlexBtnWrap
@@ -45,12 +44,12 @@ const enhance = compose(
 );
 
 const FlexboxBtnPanel = ({ changeFlexStyle, activeStyle, title, subtitle, info, buttons }) =>
-  <FlexBtnPanel>
-    <FlexBtnPanelTitle>
+  <Panel>
+    <h2>
       {title}
       {' / '}
       <FlexBtnPanelSubtitle>{subtitle}</FlexBtnPanelSubtitle>
-    </FlexBtnPanelTitle>
+    </h2>
     <FlexBtnPanelInfo>{info}</FlexBtnPanelInfo>
     <FlexBtnWrap>
       {buttons.map(btn =>
@@ -64,7 +63,7 @@ const FlexboxBtnPanel = ({ changeFlexStyle, activeStyle, title, subtitle, info, 
         </Button>
       )}
     </FlexBtnWrap>
-  </FlexBtnPanel>;
+  </Panel>;
 
 FlexboxBtnPanel.propTypes = {
   activeStyle: PropTypes.string.isRequired,

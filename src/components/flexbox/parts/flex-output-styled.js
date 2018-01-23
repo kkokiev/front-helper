@@ -17,7 +17,7 @@ export const FlexOutputTitle = styled.div`
 
 export const FlexOutputItem = styled.div`
   flex-shrink: 0;
-  height: ${props => `${props.height}px`};
+  min-height: ${props => `${props.height}px`};
   width: ${props => `${props.width}px`};
   margin: 5px;
   background: #ccc;

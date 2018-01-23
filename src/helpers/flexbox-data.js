@@ -20,7 +20,7 @@ const flexWrapData = [
   {
     title: 'Cross align',
     subtitle: 'align-items',
-    info: 'Vertical align within line. "Stretch" has no effect because of fixed height of the items',
+    info: 'Vertical align within line.',
     buttons: ['flex-start', 'flex-end', 'center', 'stretch', 'baseline']
   },
   {

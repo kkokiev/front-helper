@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Button from './button';
 
 const StyledModal = styled.div`
-  display: ${props => props.isOpened ? 'block' : 'none'};
+  display: block;
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -39,8 +39,8 @@ const StyledModalFooter = styled.div`
   text-align: right;
 `;
 
-const FlexModal = ({ children, handleClose, isOpened }) =>
-  <StyledModal isOpened={isOpened}>
+const FlexModal = ({ children, handleClose }) =>
+  <StyledModal>
     <StyledModalWrap>
       <StyledModalContent>
         <StyledModalBody>
@@ -55,7 +55,6 @@ const FlexModal = ({ children, handleClose, isOpened }) =>
 
 FlexModal.propTypes = {
   children: PropTypes.node,
-  isOpened: PropTypes.bool.isRequired,
   handleClose: PropTypes.func.isRequired
 };
 

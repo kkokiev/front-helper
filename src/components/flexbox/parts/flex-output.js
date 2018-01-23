@@ -14,6 +14,7 @@ import FlexOutputContainer from './flex-output-container';
 import Button from '../../../ui/common/button';
 import Modal from '../../../ui/common/modal';
 import FlexModalOutput from './flex-modal-output';
+import FlexInfoBlock from './flex-info-block';
 
 import {
   addFlexItem,
@@ -109,11 +110,13 @@ const FlexOutput = ({
       </FlexOutputContainer>
     </FlexOutputRow>
 
-    <div>item rule flex-shrink: 0</div>
+    <FlexInfoBlock />
 
-    <Modal isOpened={showCSS} handleClose={toggleCSSModal}>
-      <FlexModalOutput data={flexContainer} />
-    </Modal>
+    {showCSS &&
+      <Modal handleClose={toggleCSSModal}>
+        <FlexModalOutput data={flexContainer} />
+      </Modal>
+    }
   </div>;
 
 FlexOutput.propTypes = {
