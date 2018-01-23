@@ -2,7 +2,6 @@
   "name": "front-helper",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kkokiev.github.io",
   "dependencies": {
     "lodash": "^4.17.4",
     "react": "^16.2.0",
@@ -20,7 +19,7 @@
     "test": "react-scripts test --env=jsdom",
     "lint": "eslint 'src/*.js' 'src/**/*.js' --cache",
     "eject": "react-scripts eject",
-    "deploy" : "npm run build&&gh-pages -d build"
+    "deploy": "npm run build&&gh-pages -b master -d build"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -32,7 +31,6 @@
     "eslint-plugin-flowtype": "^2.40.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.5.1",
-    "gh-pages": "^1.1.0"
+    "eslint-plugin-react": "^7.5.1"
   }
 }
