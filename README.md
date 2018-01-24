@@ -1,5 +1,6 @@
 ### WIP
 
+demo: kkokiev.surge.sh
 
 ```
 git clone https://github.com/kkokiev/front-helper.git

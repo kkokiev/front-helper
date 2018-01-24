@@ -6,7 +6,7 @@ import { Menu, MenuBtn, MenuList, MenuLink } from './main-menu-styled';
 import menuList from '../../helpers/menu-data';
 
 class MainMenu extends Component {
-  state = { isOpened: true };
+  state = { isOpened: false };
 
   componentDidMount() {
     document.addEventListener('mousedown', this.handleClickOutside);
