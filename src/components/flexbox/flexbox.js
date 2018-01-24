@@ -1,7 +1,7 @@
 import React from 'react';
 
 import flexWrapData from '../../helpers/flexbox-data';
-import { FlexInputSide, FlexOutputSide } from './flexbox-styled';
+import { Col40, Col60 } from '../../ui/common/col';
 import FlexOutput from './parts/flex-output';
 import FlexboxBtnPanel from './parts/flexbox-btn-panel';
 import PageTitle from '../../ui/common/page-title';
@@ -25,7 +25,7 @@ const Flexbox = () =>
     </PageTitle>
 
     <FlexPageBody>
-      <FlexInputSide>
+      <Col40>
         {flexWrapData.map((item, i) =>
           <FlexboxBtnPanel
             key={item.title + i}
@@ -35,11 +35,11 @@ const Flexbox = () =>
             buttons={item.buttons}
           />
         )}
-      </FlexInputSide>
+      </Col40>
 
-      <FlexOutputSide>
+      <Col60>
         <FlexOutput />
-      </FlexOutputSide>
+      </Col60>
     </FlexPageBody>
   </div>;
 
