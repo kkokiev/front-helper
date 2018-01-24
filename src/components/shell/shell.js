@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import MainMenu from '../main-menu/main-menu';
+import Header from '../../ui/common/header';
 
 const ShellWrap = styled.div`
   position: relative;
   min-height: 100vh;
-  padding-left: 46px;
+  padding-top: 4.6rem;
 `;
 
 const Shell = ({ children }) =>
   <ShellWrap>
-    <MainMenu />
+    <Header />
     {children}
   </ShellWrap>;
 

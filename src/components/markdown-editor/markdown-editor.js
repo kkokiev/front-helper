@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { compose, withState, withHandlers } from 'recompose';
 
 import PageTitle from '../../ui/common/page-title';
-import FlexPageBody from '../../ui/common/flex-page-body';
-import { FullHeightWrap, FullHeightContent } from '../../ui/common/full-height-markup';
-import { Col50 } from '../../ui/common/col';
+import FlexPageBody from '../../ui/layout/flex-page-body';
+import { FullHeightWrap, FullHeightContent } from '../../ui/layout/full-height-layout';
+import { Col50 } from '../../ui/layout/col';
 import MarkdownInput from './parts/markdown-input';
 import MarkdownOutput from './parts/markdown-output';
 

@@ -1,17 +1,17 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Shell from '../../components/shell/shell';
 import Header from '../../ui/common/header';
+import MainMenu from '../../components/main-menu/main-menu';
 
-describe('Shell', () => {
-  const wrapper = shallow(<Shell><div /></Shell>);
+describe('Header', () => {
+  const wrapper = shallow(<Header />);
 
   test('render', () => {
     expect(wrapper.exists()).toBe(true);
   });
 
   test('render MainMenu', () => {
-    expect(wrapper.contains(<Header />)).toBe(true);
+    expect(wrapper.contains(<MainMenu />)).toBe(true);
   });
 });

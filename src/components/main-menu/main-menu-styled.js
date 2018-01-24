@@ -2,20 +2,17 @@ import styled from 'styled-components';
 
 export const Menu = styled.div`
   position: fixed;
+  z-index: 900;
   left: 0;
-  top: 0;
+  top: 4.6rem;
   bottom: 0;
   overflow-y: auto;
-  width: 200px;
-  padding: 5px;
+  width: 300px;
+  padding: 2rem 0;
   background: #000;
   color: #fff;
   transition: .35s ease-in-out;
-  transform: translateX(${props => props.isOpened ? '0px' : '-154px'});
-`;
-
-export const MenuBtnWrap = styled.div`
-  text-align: right;
+  transform: translateX(${props => props.isOpened ? '0px' : '-300px'});
 `;
 
 export const MenuBtn = styled.button`
@@ -62,5 +59,26 @@ export const MenuBtn = styled.button`
       top: ${props => props.isOpened ? '11px' : '17px'};
       transform: ${props => props.isOpened ? 'rotate(-135deg)' : 'rotate(0deg)'};
     }
+  }
+`;
+
+export const MenuList = styled.ul`
+  padding: 0;
+
+  li {
+    margin: 0;
+    list-style: none;
+  }
+`;
+
+export const MenuLink = styled.a`
+  display: block;
+  padding: 1rem 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  background: ${props => props.isActive ? '#303030' : 'transparent'};
+
+  &:hover {
+    background: ${props => props.isActive ? '#505050' : '#0f0f0f'};
   }
 `;

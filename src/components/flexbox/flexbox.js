@@ -1,11 +1,11 @@
 import React from 'react';
 
 import flexWrapData from '../../helpers/flexbox-data';
-import { Col40, Col60 } from '../../ui/common/col';
+import { Col40, Col60 } from '../../ui/layout/col';
 import FlexOutput from './parts/flex-output';
 import FlexboxBtnPanel from './parts/flexbox-btn-panel';
 import PageTitle from '../../ui/common/page-title';
-import FlexPageBody from '../../ui/common/flex-page-body';
+import FlexPageBody from '../../ui/layout/flex-page-body';
 
 const Flexbox = () =>
   <div>

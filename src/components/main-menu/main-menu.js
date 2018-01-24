@@ -1,31 +1,63 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { compose, withState, withHandlers } from 'recompose';
-import { Menu, MenuBtnWrap, MenuBtn } from './main-menu-styled';
 
-const enhance = compose(
-  withState('state', 'setState', { isOpened: false }),
-  withHandlers({
-    toggleMenu: ({ setState }) => () => setState(state => ({ isOpened: !state.isOpened }))
-  })
-);
+import { withRouter } from 'react-router';
+import { Menu, MenuBtn, MenuList, MenuLink } from './main-menu-styled';
+import menuList from '../../helpers/menu-data';
 
-const MainMenu = ({ state: { isOpened }, toggleMenu }) =>
-  <Menu isOpened={isOpened}>
-    <MenuBtnWrap>
-      <MenuBtn onClick={toggleMenu} isOpened={isOpened}>
-        <span />
-        <span />
-        <span />
-      </MenuBtn>
-    </MenuBtnWrap>
-  </Menu>;
+class MainMenu extends Component {
+  state = { isOpened: true };
+
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClickOutside);
+  }
+
+  setWrapperRef = (node) => {
+    this.wrapperRef = node;
+  }
+
+  toggleMenu = () => {
+    this.setState({ isOpened: !this.state.isOpened });
+  }
+
+  handleClickOutside = (e) => {
+    // https://stackoverflow.com/questions/32553158/detect-click-outside-react-component
+    if (this.wrapperRef && !this.wrapperRef.contains(e.target)) {
+      this.setState({ isOpened: false });
+    }
+  }
+
+  render() {
+    const { isOpened } = this.state;
+    const { pathname } = this.props.location;
+
+    return (
+      <div ref={this.setWrapperRef}>
+        <MenuBtn onClick={this.toggleMenu} isOpened={isOpened}>
+          <span />
+          <span />
+          <span />
+        </MenuBtn>
+        <Menu isOpened={isOpened}>
+          <MenuList>
+            {menuList.map(item =>
+              <li key={item.name}>
+                <MenuLink href={item.link} isActive={pathname === item.link}>{item.name}</MenuLink>
+              </li>
+            )}
+          </MenuList>
+        </Menu>
+      </div>
+    );
+  }
+}
 
 MainMenu.propTypes = {
-  state: PropTypes.shape({
-    isOpened: PropTypes.bool.isRequired
-  }),
-  toggleMenu: PropTypes.func.isRequired
+  location: PropTypes.object.isRequired
 };
 
-export default enhance(MainMenu);
+export default withRouter(MainMenu);
