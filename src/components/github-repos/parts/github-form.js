@@ -6,7 +6,7 @@ import { compose, withState, withHandlers } from 'recompose';
 
 import {
   fetchGithubUserDataAction
-} from '../../../modules/github-repos/github-repos-actions';
+} from '../../../modules/github/github-actions';
 
 const mapDispatchToProps = {
   fetchGithubUserDataAction
@@ -14,7 +14,7 @@ const mapDispatchToProps = {
 
 const enhance = compose(
   connect(null, mapDispatchToProps),
-  withState('state', 'setState', { username: '' }),
+  withState('state', 'setState', { username: 'facebook' }),
   withHandlers({
     onInputChange: ({ setState }) => (e) => {
       const { name, value } = e.target;

@@ -3,6 +3,7 @@ import React from 'react';
 import PageTitle from '../../ui/common/page-title';
 import { FullHeightWrap, FullHeightContent } from '../../ui/layout/full-height-layout';
 import GithubForm from './parts/github-form';
+import GithubReposList from './parts/github-repos-list';
 
 const GithubRepos = () =>
   <FullHeightWrap>
@@ -11,7 +12,7 @@ const GithubRepos = () =>
     </PageTitle>
 
     <FullHeightContent>
-      Some list
+      <GithubReposList />
     </FullHeightContent>
   </FullHeightWrap>;
 

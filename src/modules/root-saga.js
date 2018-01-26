@@ -1,6 +1,6 @@
 import { fork } from 'redux-saga/effects';
 
-import githubReposSaga from './github-repos/github-repos-saga';
+import githubReposSaga from './github/github-saga';
 
 export const sagas = [
   githubReposSaga
