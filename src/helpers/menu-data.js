@@ -4,6 +4,10 @@ const menuList = [
     link: '/'
   },
   {
+    name: 'Github Issues',
+    link: '/github'
+  },
+  {
     name: 'Markdown editor',
     link: '/markdown-editor'
   }

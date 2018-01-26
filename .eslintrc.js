@@ -20,6 +20,7 @@ module.exports = {
     "react/no-array-index-key": [0],
     "no-shadow": [0],
     "no-confusing-arrow": [0],
-    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-restricted-syntax": 0
   }
 };
