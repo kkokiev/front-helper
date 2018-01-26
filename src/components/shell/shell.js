@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Header from '../../ui/common/header';
+import Notification from '../../ui/common/notification';
 
 const ShellWrap = styled.div`
   position: relative;
@@ -14,6 +15,7 @@ const Shell = ({ children }) =>
   <ShellWrap>
     <Header />
     {children}
+    <Notification />
   </ShellWrap>;
 
 Shell.propTypes = {

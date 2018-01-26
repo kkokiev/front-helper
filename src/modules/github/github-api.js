@@ -9,6 +9,7 @@ const apiUrl = 'https://api.github.com';
 //     .then(res => res.body);
 
 const request = ['get', 'post', 'put', 'delete'].reduce((result, method) => {
+  /* eslint no-param-reassign: "off" */
   result[method] = url => superagent[method](apiUrl + url);
   return result;
 }, {});

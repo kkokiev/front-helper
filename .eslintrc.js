@@ -21,6 +21,8 @@ module.exports = {
     "no-shadow": [0],
     "no-confusing-arrow": [0],
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
-    "no-restricted-syntax": 0
+    "no-restricted-syntax": 0,
+    "no-nested-ternary": 0,
+    "camelcase": 0
   }
 };

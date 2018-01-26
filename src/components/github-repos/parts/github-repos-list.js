@@ -28,7 +28,7 @@ const GithubReposList = ({ githubUser, githubRepos }) =>
     )}
   </Container>;
 
-GithubReposList.proPtypes = {
+GithubReposList.propTypes = {
   githubRepos: PropTypes.array.isRequired,
   githubUser: PropTypes.object.isRequired
 };
