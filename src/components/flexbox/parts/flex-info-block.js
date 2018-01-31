@@ -8,7 +8,7 @@ const FlexInfoBlock = () =>
       <h2>Browser compatibility</h2>
       <p>
         All modern browser, IE10/11&apos;s support are buggy,
-        IE &#60;&#61; 9 don&apos;t support flexbox.
+        IE &#60;&#61; 9 doesn&apos;t support flexbox.
       </p>
       <p>Check <a href="https://caniuse.com/#feat=flexbox">Can i use...</a> for more info</p>
     </Panel>
