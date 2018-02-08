@@ -70,15 +70,3 @@ export const MenuList = styled.ul`
     list-style: none;
   }
 `;
-
-export const MenuLink = styled.a`
-  display: block;
-  padding: 1rem 1.5rem;
-  color: #fff;
-  text-decoration: none;
-  background: ${props => props.isActive ? '#303030' : 'transparent'};
-
-  &:hover {
-    background: ${props => props.isActive ? '#505050' : '#0f0f0f'};
-  }
-`;

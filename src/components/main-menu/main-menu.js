@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { withRouter } from 'react-router';
-import { Menu, MenuBtn, MenuList, MenuLink } from './main-menu-styled';
+import { Menu, MenuBtn, MenuList } from './main-menu-styled';
+import MenuLink from './main-menu-link';
 import menuList from '../../helpers/menu-data';
 
 class MainMenu extends Component {
@@ -46,7 +47,11 @@ class MainMenu extends Component {
           <MenuList>
             {menuList.map(item =>
               <li key={item.name}>
-                <MenuLink href={item.link} isActive={pathname === item.link}>{item.name}</MenuLink>
+                <MenuLink
+                  path={item.link}
+                  activeClassName={pathname === item.link ? 'active' : null}
+                  name={item.name}
+                />
               </li>
             )}
           </MenuList>
